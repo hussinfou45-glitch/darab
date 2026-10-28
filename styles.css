@@ -1,0 +1,41 @@
+/* خط نورسل: ضع الملفات في fonts/ بعد التحقق من الترخيص، وإلا يُستخدم Noto Sans Arabic */
+@font-face{font-family:"Norsal";font-weight:400;src:url(fonts/Norsal-Regular.woff2) format("woff2");font-display:swap}
+@font-face{font-family:"Norsal";font-weight:700;src:url(fonts/Norsal-Bold.woff2) format("woff2");font-display:swap}
+:root{--g900:#064e30;--g700:#0b5d3b;--g500:#12935c;--g100:#e3f4ea;
+--bg:#fff;--bg2:#f2f4f3;--tx:#10201a;--mut:#5a6b63;--bd:#dde4e0;--sh:0 6px 24px rgba(0,0,0,.18);--tile:none;
+--f:"Norsal","Noto Sans Arabic",system-ui,Tahoma,sans-serif}
+:root[data-theme=dark]{--g900:#7fe0ae;--g700:#19b26e;--g500:#1fc47c;--g100:#0f2a1f;
+--bg:#14191a;--bg2:#1d2425;--tx:#eaf3ee;--mut:#9db0a7;--bd:#2a3433;--sh:0 6px 24px rgba(0,0,0,.6);
+--tile:invert(1) hue-rotate(180deg) brightness(.9) contrast(.9) saturate(.6)}
+*{box-sizing:border-box;margin:0}
+html,body{height:100%;font-family:var(--f);background:var(--bg);color:var(--tx);overflow:hidden}
+#map{position:fixed;inset:0;background:var(--bg2)}
+.leaflet-tile-pane{filter:var(--tile)}
+.leaflet-control-attribution{font-size:10px}
+button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
+.top{position:fixed;inset:calc(10px + env(safe-area-inset-top)) 10px auto 10px;z-index:900;display:grid;gap:8px}
+.search{display:flex;align-items:center;gap:8px;background:var(--bg);border-radius:18px;padding:8px 12px;box-shadow:var(--sh)}
+.brand{font-weight:900;color:var(--g700);font-size:1.1rem}
+.search input{flex:1;min-width:0;border:0;background:transparent;font:inherit;font-size:1rem;color:var(--tx);outline:0;padding:8px 4px}
+.chip{min-width:44px;height:44px;border-radius:14px;background:var(--bg2);font-weight:700}
+.status{display:flex;gap:6px}
+.pill{display:flex;align-items:center;gap:6px;background:var(--bg);border-radius:99px;padding:4px 10px;font-size:.78rem;font-weight:600;box-shadow:var(--sh)}
+.pill i{width:8px;height:8px;border-radius:50%;background:#c0392b}
+.gps-on i,.net-on i{background:var(--g500)} .gps-wait i{background:#e0a100}
+.net-off i{background:#c0392b}
+.fabs{position:fixed;inset-inline-end:12px;bottom:calc(230px + env(safe-area-inset-bottom));z-index:900;display:grid;gap:10px}
+.fab{width:52px;height:52px;border-radius:16px;background:var(--bg);box-shadow:var(--sh);font-size:1.4rem}
+.fab.primary{background:var(--g700);color:#fff}
+.card{position:fixed;inset-inline:0;bottom:calc(64px + env(safe-area-inset-bottom));z-index:900;margin:0 10px;background:var(--bg);border-radius:22px;padding:10px 16px 16px;box-shadow:var(--sh);transition:transform .25s}
+.card.collapsed{transform:translateY(calc(100% - 34px))}
+.grab{width:44px;height:5px;border-radius:9px;background:var(--bd);margin:0 auto 10px;cursor:pointer}
+.card h2{font-size:1.1rem;font-weight:800}
+.card p{color:var(--mut);font-size:.9rem;margin:4px 0 12px;line-height:1.7}
+.cta{width:100%;min-height:52px;border-radius:16px;background:var(--g700);color:#fff;font-weight:800;font-size:1.05rem}
+.bottom{position:fixed;inset:auto 0 0 0;z-index:900;display:flex;background:var(--bg);padding-bottom:env(safe-area-inset-bottom);border-top:1px solid var(--bd)}
+.bottom button{flex:1;min-height:56px;display:grid;place-items:center;gap:0;font-size:.72rem;color:var(--mut)}
+.bottom button.on{color:var(--g700)} .bottom b{font-weight:600}
+#toast{position:fixed;inset-inline:16px;top:50%;z-index:1000;margin:auto;max-width:360px;background:#10201a;color:#fff;padding:12px 16px;border-radius:14px;text-align:center;opacity:0;pointer-events:none;transition:opacity .2s}
+#toast.show{opacity:.95}
+button:focus-visible,input:focus-visible{outline:3px solid var(--g500);outline-offset:2px}
+@media (min-width:820px){.card{inset-inline:auto 20px;width:380px;margin:0}.top{max-width:460px}}

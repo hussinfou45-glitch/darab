@@ -1,0 +1,15 @@
+window.I18N={
+ar:{search_ph:"ابحث عن مكان في العراق (المرحلة 2)",gps_off:"GPS غير مفعّل",gps_wait:"جارٍ تحديد الموقع…",gps_on:"GPS يعمل",
+online:"متصل",offline:"غير متصل",locate:"موقعي الحالي",center:"توسيط على العراق",layers:"طبقات الخريطة",
+card_title:"إلى أين تريد الذهاب؟",card_body:"الخريطة حقيقية من OpenStreetMap. البحث والمسارات تأتي في المرحلة الثانية، وبيانات المرور الحية غير متوفرة حالياً.",
+start:"ابدأ الملاحة (قريباً)",nav_map:"الخريطة",nav_near:"الأقرب إليّ",nav_reports:"البلاغات",nav_ai:"المساعد",
+soon:"هذه الميزة ضمن مراحل لاحقة ولم تُنفَّذ بعد.",denied:"تم رفض إذن الموقع. يمكنك تفعيله من إعدادات المتصفح.",
+unavail:"تعذّر تحديد الموقع حالياً.",nogeo:"المتصفح لا يدعم تحديد الموقع.",insecure:"تحديد الموقع يتطلب HTTPS أو localhost.",
+you:"موقعك (دقة ±{m} م)",outside:"موقعك خارج حدود العراق؛ الخريطة مخصصة للعراق.",attr:"© مساهمو OpenStreetMap"},
+en:{search_ph:"Search a place in Iraq (Phase 2)",gps_off:"GPS off",gps_wait:"Locating…",gps_on:"GPS active",
+online:"Online",offline:"Offline",locate:"My location",center:"Center on Iraq",layers:"Map layers",
+card_title:"Where to?",card_body:"The map is real OpenStreetMap data. Search and routing arrive in Phase 2; live traffic data is not available yet.",
+start:"Start navigation (soon)",nav_map:"Map",nav_near:"Nearest",nav_reports:"Reports",nav_ai:"Assistant",
+soon:"This feature belongs to a later phase and isn't built yet.",denied:"Location permission denied. Enable it in browser settings.",
+unavail:"Couldn't determine your location.",nogeo:"This browser doesn't support geolocation.",insecure:"Geolocation needs HTTPS or localhost.",
+you:"You are here (±{m} m)",outside:"You appear to be outside Iraq; this map is Iraq-only.",attr:"© OpenStreetMap contributors"}};
